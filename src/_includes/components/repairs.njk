@@ -1,7 +1,7 @@
 <p class="text-gray-200 text-lg mt-10 w-2/4 text-center">I offer expert restoration and repair of Polaroid cameras. If your camera has an issue, I can probably fix it.</p>
 <p class="text-gray-200 text-lg mt-10 w-2/4 text-center">Please note that I do NOT service Fuji Instax cameras. These cameras are sadly designed to be easier to replace than repair, and are generally available brand new for less than I could charge to fix them. Services include:</p>
 
-<div id="repair-items" class="flex  md:flex-row md:flex-wrap w-2/4 mt-10 mx-4">
+<div id="repair-items" class="flex flex-col  md:flex-row md:flex-wrap w-2/4 mt-10 mx-4">
     {%- for repair in collections.repairs -%}
 
         <div class="mb-8 px-4 lg:w-1/3 lg:mb-0">
@@ -20,7 +20,7 @@
     {% endfor %}
 </div>
 
-<div class="pb-10 pt-10">
+<div class="pb-10 pt-10 items-center justify-center">
     
 <a href="/repairs">
 <h1 class="dark:text-white text-slate-700 text-6xl font-bold mb-4 underline">Find out more ... </h1>
