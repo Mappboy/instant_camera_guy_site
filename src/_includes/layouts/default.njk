@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "components/head.webc" %}
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <header class="header">
+    <nav class="bg-slate-900 text-slate-900 dark:text-white py-3 navbar is-transparent is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand flex justify-center">
+        <a class="navbar-item force-center brand-nav mobile-brand  has-text-centered text-white font-bold text-3xl" href="/">
+        The Instant 📷 Guy
+      </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="my-navbar-menu" @click="showNav = !showNav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      {% block nav %}{% endblock %}
+    </nav>
+
+    <nav class="">
+
+      <div id="my-navbar-menu" :class="{ 'is-active': showNav }" class="navbar-menu">
+        <div class="navbar-start"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+
+  {% include "components/footer.html" %}
+</main>
+
+</html>
+<script>
+const showNav = false;
+</script>

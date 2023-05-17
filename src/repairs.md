@@ -1,5 +1,5 @@
 ---
-layout: repairs_page.njk
+layout: layouts/repairs_page.njk
 title: Repairs - The Instant 📷 Guy
 ---
 I offer expert restoration and repair of Polaroid cameras. If your camera has an issue, I can probably fix it.

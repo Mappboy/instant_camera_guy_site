@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+layout: layouts/index.njk
 title: The Instant 📷 Guy
 ---
 <body class="flex flex-col">
@@ -19,7 +19,7 @@ title: The Instant 📷 Guy
     id="about"
     class="grow full-height bg-blue-500 flex items-center justify-center"
   >
-        {% include "about.njk" %}
+        {% include "components/about.njk" %}
   </section>
   <section
     id="service"
@@ -28,7 +28,7 @@ title: The Instant 📷 Guy
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <h1 class="dark:text-white text-slate-700 text-6xl font-bold mb-4">Service</h1>
 </div>
-    {% include "service.njk" %}
+    {% include "components/service.njk" %}
   </section>
   <section
     id="repairs"
@@ -37,7 +37,7 @@ title: The Instant 📷 Guy
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <h1 class="dark:text-white text-slate-700 text-6xl font-bold mb-4">Repairs</h1>
 </div>
-    {% include "repairs.njk" %}
+    {% include "components/repairs.njk" %}
   </section>
   <section
     id="blog"
