@@ -1,0 +1,38 @@
+{
+  "name": "site_2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all -p dev:*",
+    "build": "run-s build:*",
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "tailwindcss  -i ./src/style.css -o ./_site/style.css --watch --postcss",
+    "build:11ty": "eleventy",
+    "build:css": "tailwindcss  -i ./src/style.css -o ./_site/style.css --postcss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "eleventy-plugin-heroicons": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^8.3.1",
+    "prettier": "2.8.8",
+    "sharp": "^0.32.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "@vidhill/fortawesome-brands-11ty-shortcode": "^1.0.2",
+    "markdown-it": "^12.3.2"
+  }
+}

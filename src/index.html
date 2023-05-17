@@ -1,0 +1,53 @@
+---
+layout: index.njk
+title: The Instant 📷 Guy
+---
+<body class="flex flex-col">
+  <section
+    class="grow full-height bg-slate-500 flex items-center justify-center"
+  >
+  <div class="gap-4"> 
+      <div >
+        <h1 class="text-white text-6xl text-center font-bold">
+          Australia’s home for Polaroid and Instant Camera Repairs
+        </h1>
+      </div>
+        {% Image "./assets/images/sx_70.png", "A poloroid SX 70", 800, 800, "flex items-center justify-center" %}
+      </div>
+  </section>
+  <section
+    id="about"
+    class="grow full-height bg-blue-500 flex items-center justify-center"
+  >
+        {% include "about.njk" %}
+  </section>
+  <section
+    id="service"
+    class="grow full-height bg-green-500 flex flex-col items-center justify-evenly"
+  >
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="dark:text-white text-slate-700 text-6xl font-bold mb-4">Service</h1>
+</div>
+    {% include "service.njk" %}
+  </section>
+  <section
+    id="repairs"
+    class="grow full-height md:grow-0 bg-red-500 flex flex-col items-center justify-center"
+  >
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="dark:text-white text-slate-700 text-6xl font-bold mb-4">Repairs</h1>
+</div>
+    {% include "repairs.njk" %}
+  </section>
+  <section
+    id="blog"
+    class="flex-grow full-height bg-yellow-500 flex flex-col items-center justify-center"
+  >
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-white text-5xl pb-10 ">Blog</h1>
+    </div>
+    <div>
+      <h2 class="text-white text-4xl">...Coming Soon</h2>
+    </div>
+  </section>
+</body>

@@ -1,0 +1,50 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body,
+p,
+.content {
+font-family: 'Raleway', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+.title,
+.subtitle {
+font-family: 'Righteous', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+#about-nav {
+color: #3182ce;
+}
+
+#service-nav {
+color: #48bb78;
+}
+
+#blog-nav {
+color: #f6e05e;
+}
+
+#repairs-nav {
+color: #f56565;
+}
+
+#contact-nav {
+  color: #9ca1ac;
+  }
+
+.brand-nav {
+font-family: Righteous, sans-serif;
+}
+
+.full-height {
+    min-height: 100vh;
+  }
+
