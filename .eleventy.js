@@ -8,7 +8,7 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
-    baseHref: "the_instant_camera_guy_site"
+    baseHref: "instant_camera_guy_site"
   });
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "fonts" });
   eleventyConfig.addPassthroughCopy("src/**/*.{gif,svg}");
