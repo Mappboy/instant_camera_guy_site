@@ -60,7 +60,7 @@ async function handleImage(relativeSrc, alt, height, width, img_class) {
   let stats = await Image(src, {
     widths: [24, 320, 640, 960, 1200, 1800, 2400],
     formats: ['jpeg', 'webp'],
-    urlPath: '/assets/images/',
+    urlPath: 'assets/images/',
     outputDir: paths.imagesDest,
   });
 
