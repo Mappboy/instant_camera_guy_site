@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "components/head.webc" %}
-    <link rel="stylesheet" href={{ "style.css" | htmlBaseUrl }} >
+    <link rel="stylesheet" href={{ "/style.css" | transformWithHtmlBase }} >
   </head>
   <header class="header">
     <nav class="bg-slate-900 text-slate-900 dark:text-white py-3 navbar is-transparent is-dark" role="navigation" aria-label="main navigation">
