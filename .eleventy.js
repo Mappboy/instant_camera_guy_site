@@ -3,6 +3,8 @@ const {
   fortawesomeBrandsPlugin,
 } = require("@vidhill/fortawesome-brands-11ty-shortcode");
 const Image = require("@11ty/eleventy-img");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "fonts" });
@@ -52,6 +54,7 @@ module.exports = function (eleventyConfig) {
       data: "_data",
       output: "_site",
     },
+    pathPrefix: "/the_instant_camera_guy_site/"
   };
   templateFormats: ["html", "liquid", "md", "njk", "webc"];
   // WebC
