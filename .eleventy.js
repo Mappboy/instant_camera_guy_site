@@ -7,6 +7,7 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "fonts" });
   eleventyConfig.addPassthroughCopy("src/**/*.{gif,svg}");
   eleventyConfig.addPassthroughCopy("src/assets/images");
