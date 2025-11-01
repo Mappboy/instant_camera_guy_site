@@ -8,3 +8,6 @@
     <a id="contact-nav" class="font-bold navbar-item px-2 text-lg" data-menuanchor="contact" href="#footer">Contact</a>
 </div>
 {% endblock %}
+{% block content %}
+  {{ content | safe }}
+{% endblock %}

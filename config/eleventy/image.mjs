@@ -1,26 +1,29 @@
-const path = require('path');
-const Image = require('@11ty/eleventy-img');
-const sharp = require('sharp');
+import path from 'path';
+import Image from '@11ty/eleventy-img';
+import sharp from 'sharp';
+import fs from 'fs/promises';
 
-const paths = require('../paths');
+import paths from './../paths.mjs';
 
 async function getPlaceHolder(outputPath) {
-  const placeholder = await sharp(outputPath)
-    .resize({ fit: sharp.fit.inside })
-    .blur()
-    .toBuffer();
-
-  return placeholder;
+  // The following code is causing a native crash in the `sharp` module.
+  // This is likely a bug in `sharp` or one of its dependencies.
+  // As a workaround, we are returning a dummy placeholder.
+  // You can try to update `sharp` to the latest version, or report the issue to the `sharp` developers.
+  // const imageBuffer = await fs.readFile(outputPath);
+  // const placeholder = await sharp(imageBuffer)
+  //   .resize({ fit: sharp.fit.inside })
+  //   .blur()
+  //   .toBuffer();
+  // return placeholder;
+  return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 }
 
 function generateSrcset(stats) {
   return Object.keys(stats).reduce(
     (acc, format) => ({
       ...acc,
-      [format]: stats[format].reduce(
-        (_acc, curr) => `${_acc} ${curr.srcset} ,`,
-        ''
-      ),
+      [format]: stats[format].map(entry => entry.srcset).join(', ')
     }),
     {}
   );
@@ -47,7 +50,7 @@ function getSrc(relativeSrc, outputPath) {
 }
 
 async function handleImage(relativeSrc, alt, height, width, img_class) {
-  if (!alt) throw new Error(`Missing \`alt\` on myImage from: ${relativeSrc}`);
+  if (!alt) throw new Error(`Missing alt on myImage from: ${relativeSrc}`);
 
   const src = getSrc(relativeSrc, this.page.inputPath);
 
@@ -85,4 +88,4 @@ async function handleImage(relativeSrc, alt, height, width, img_class) {
   return `<div class="image-wrapper ${img_class}"> <picture> ${sourceWebp} ${sourceJpeg} ${img} </picture> </div>`;
 }
 
-module.exports = { handleImage };
+export { handleImage };

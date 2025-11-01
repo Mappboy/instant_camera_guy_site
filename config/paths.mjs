@@ -1,6 +1,6 @@
-const fs = require('fs');
-const fg = require('fast-glob');
-const path = require('path');
+import fs from 'fs';
+import fg from 'fast-glob';
+import path from 'path';
 
 const appDirectory = fs.realpathSync(process.cwd());
 
@@ -8,7 +8,7 @@ const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
 const src = resolveApp('src');
 
-module.exports = {
+export default {
   src,
 
   root: appDirectory,

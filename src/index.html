@@ -2,52 +2,54 @@
 layout: layouts/index.njk
 title: The Instant 📷 Guy
 ---
-<body class="flex flex-col">
-  <section
-    class="grow full-height bg-slate-500 flex items-center justify-center"
-  >
-  <div class="gap-4"> 
-      <div >
-        <h1 class="text-white text-6xl text-center font-bold">
-          Australia’s home for Polaroid and Instant Camera Repairs
-        </h1>
+<body>
+  <header>
+    <h1>The Instant 📷 Guy</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#repairs">Repairs</a>
+      <a href="#service">Service</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="hero" style="text-align: center; background: none; border: none;">
+      <div class="polaroid-frame p1">
+        <img src="./assets/images/sx_70.png" alt="A polaroid SX 70" width="200">
       </div>
-        {% Image "./assets/images/sx_70.png", "A poloroid SX 70", 800, 800, "flex items-center justify-center" %}
+      <div class="polaroid-frame p2">
+        <img src="./assets/images/5sXgHgW96_-1200.jpeg" alt="Restored vintage camera" width="200">
       </div>
-  </section>
-  <section
-    id="about"
-    class="grow full-height bg-blue-500 flex items-center justify-center"
-  >
-        {% include "components/about.njk" %}
-  </section>
-  <section
-    id="service"
-    class="grow full-height bg-green-500 flex flex-col items-center justify-evenly"
-  >
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h1 class="dark:text-white text-slate-700 text-6xl font-bold mb-4">Service</h1>
-</div>
-    {% include "components/service.njk" %}
-  </section>
-  <section
-    id="repairs"
-    class="grow full-height md:grow-0 bg-red-500 flex flex-col items-center justify-center"
-  >
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h1 class="dark:text-white text-slate-700 text-6xl font-bold mb-4">Repairs</h1>
-</div>
-    {% include "components/repairs.njk" %}
-  </section>
-  <section
-    id="blog"
-    class="flex-grow full-height bg-yellow-500 flex flex-col items-center justify-center"
-  >
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-white text-5xl pb-10 ">Blog</h1>
-    </div>
-    <div>
-      <h2 class="text-white text-4xl">...Coming Soon</h2>
-    </div>
-  </section>
+      <div class="polaroid-frame p3">
+        <img src="./assets/images/eB3B0cTXdx-1200.jpeg" alt="Shipping a camera" width="200">
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About THE INSTANT CAMERA GUY</h2>
+      {% include "components/about.njk" %}
+    </section>
+
+    <section id="service">
+      <h2>Service</h2>
+      {% include "components/service.njk" %}
+    </section>
+
+    <section id="repairs">
+      <h2>Repairs</h2>
+      {% include "components/repairs.njk" %}
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div>
+        <h3 style="color:#E67E22; font-size:2em;">...Coming Soon</h3>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 The Instant Camera Guy</p>
+  </footer>
 </body>

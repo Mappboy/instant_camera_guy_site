@@ -1,13 +1,14 @@
-<div id="post-content" class="flex flex-col md:flex-row md:flex-wrap">
+<div id="post-content" class="prose lg:prose-xl">
     {%- for service in collections.service -%}
-    <div class="max-w-sm rounded overflow-hidden shadow-lg m-4 gap-6">
-        <figure class="w-full h-2/3 ">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+        <figure>
             {% Image service.data.img, service.data.alt_image, "w-full" %}
         </figure>
-        <div class="px-6 py-4">
-            <div class="font-bold  text-gray-800 text-xl mb-2">{{ service.data.title }}</div>
-            <p class="dark:text-white text-gray-500 text-base">{{ service.content | strip_html }}</p>
+        <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2">{{ service.data.title }}</h3>
+            <p class="text-gray-700 text-base">{{ service.content | strip_html }}</p>
         </div>
     </div>
     {%- endfor -%}
 </div>
+
